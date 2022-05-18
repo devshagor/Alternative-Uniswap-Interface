@@ -49,7 +49,7 @@ function ConnectWalletPage() {
     <div>
       <div className="Title">
         <h1 className="navbar-logo">
-          Alternative Uniswap Interface
+          Jacobhatton Uniswap Interface
         </h1>
       </div>
 
