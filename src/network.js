@@ -3,6 +3,7 @@ import { Contract, ethers } from "ethers";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 import { SnackbarProvider } from "notistack";
 import ConnectWalletPage from "./Components/connectWalletPage";
+// eslint-disable-next-line
 import {
   getAccount,
   getFactory,
@@ -91,7 +92,7 @@ const Web3Provider = (props) => {
       try {
         // Check the account has not changed
         const account = await getAccount();
-        if (account != network.account) {
+        if (account !== network.account) {
           await setupConnection();
         }
         // const chainID = await getNetwork(network.provider);
@@ -106,6 +107,7 @@ const Web3Provider = (props) => {
     }, 2000);
   }
 
+// eslint-disable-next-line
   useEffect(async () => {
     // Initial setup
     console.log("Initial hook");
@@ -118,6 +120,7 @@ const Web3Provider = (props) => {
     }
     const listener = createListener();
     backgroundListener.current = listener;
+    // eslint-disable-next-line
     return () => clearInterval(backgroundListener.current);
   }, []);
 
